@@ -1,0 +1,3 @@
+chess
+pre-commit
+pydantic
