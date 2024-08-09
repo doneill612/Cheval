@@ -1,3 +1,4 @@
 chess
 pre-commit
 pydantic
+stockfish
