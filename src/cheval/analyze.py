@@ -55,6 +55,14 @@ class Analyzer:
         new_cp = new_evaluation["value"]
         p_win_after = self._cp_to_prob(new_cp, ply.player == "White", is_now_mate)
 
+        # build eval entity
+        evaluation = PlyEval(
+            engine_val=new_cp,
+            p_win=p_win_after,
+            best_uci=best_move,
+            is_mate=is_now_mate,
+        )
+
         # calculate the change in probability of winning (color dependent), classify move
         delta = abs(p_win_after - p_win_before)
         if (ply.player == "White" and p_win_after < p_win_before) or (
