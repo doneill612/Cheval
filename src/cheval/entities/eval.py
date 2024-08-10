@@ -19,7 +19,6 @@ class PlyEval(BaseModel):
         "Blunder",
     ] | None = None
     remarks: str | None = None
-    previous_ply_val: float | None = None
 
 
 class GameEval(BaseModel):
